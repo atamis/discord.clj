@@ -1,6 +1,6 @@
-(defproject discord.clj "1.1.1"
-  :description "A library for creating Discord bots in Clojure."
-  :url "https://github.com/gizmo385/discord.clj"
+(defproject atamis-discord.clj "1.1.1"
+  :description "A library for creating Discord bots in Clojure (atamis variant)."
+  :url "https://github.com/atamis/discord.clj"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.8.0"]
