@@ -102,9 +102,10 @@
               delete  (partial http/delete-message client (:channel message))
               pm      (partial pm* client (:send-channel client) (get-in message [:author :id]))]
 
+      (timbre/trace message)
       ;; If the message starts with the bot prefix, we'll dispatch to any extension extensions that
       ;; have been installed
-      (if (-> message :content (starts-with? prefix))
+      (if (-> message :content (starts-with? (name prefix)))
         (go
           (dispatch-to-extensions client message prefix extensions)))
 

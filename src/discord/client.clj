@@ -65,7 +65,7 @@
          (if (-> message :author :bot? not)
            (try
              (message-handler client message)
-             (catch Exception e (timbre/errorf "Error handling message: %s" e))))
+             (catch Exception e (timbre/error e "While handling message"))))
          (recur)))
 
      ;; Read messages from the send channel and call send-message on them. This allows for
